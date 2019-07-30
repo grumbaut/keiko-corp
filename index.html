@@ -8,8 +8,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-	<link rel="stylesheet" type="text/css" href="css/owl.transitions.css"/>
-	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
 	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
 </head>
@@ -200,7 +198,23 @@
 
 
 
-
+	<script type='text/javascript'>
+		  const loadStylesheet = (src) => {
+			if (document.createStylesheet) { // not supported in every browser
+				document.createStylesheet(src);
+			} else {
+				const stylesheet = document.createElement('link');
+				stylesheet.href = src;
+				stylesheet.type = 'text/css';
+				stylesheet.rel = 'stylesheet';
+				document.getElementsByTagName('head')[0].appendChild(stylesheet);
+			}
+		}
+		window.onload = () => {
+			loadStylesheet('css/owl.transitions.css');
+			loadStylesheet('css/owl.carousel.css');
+		};
+	</script>
 	<!--  Testimonials Section  -->
 	<section class="testimonials animated wow fadeIn" id="testimonials" data-wow-duration="2s">
 		<div class="container">
