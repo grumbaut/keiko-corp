@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 	//Navigation menu scrollTo
-	$('header nav ul li a').click(function(event){
+	$('.header-nav').click(function(event){
 		event.preventDefault();
 		var section = $(this).attr('href');
 		var section_pos = $(section).position();
